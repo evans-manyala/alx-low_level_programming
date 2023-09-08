@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include <string.h>
-/**
-  * main - the program execution stars from here*
-  * return: when completed successfully  returns zero(0)
+
+ /**
+  * main - Start here*
+  * return: Success(0)
   */
 
 int main(void)
