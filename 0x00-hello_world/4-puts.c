@@ -1,10 +1,8 @@
 #include <stdio.h>
-
- /**
-  * main - Start here*
-  * return: Success(0)
+/**
+  * main - start block
+  * Return: Success(0)
   */
-
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
