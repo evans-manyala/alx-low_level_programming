@@ -4,26 +4,23 @@
  *
  * Return:  Success(0)
  */
-int main(void)
+int main(void) 
 {
-int x;
-int y;
-int z;
-
+char x, y, z;
 for (x = '0'; x <= '7'; x++)
 {
 for (y = x + 1; y <= '9'; y++)
 {
-for (z = y + 1; z <= '9'; z++)
-{
+z = y + 1;
 putchar(x);
 putchar(y);
 putchar(z);
-if (x == '7' && y == '8' && z == '9')
+if (x == '7' && y == '8')
+{
 break;
+}
 putchar(',');
 putchar(' ');
-}
 }
 }
 putchar('\n');
