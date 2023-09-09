@@ -1,21 +1,30 @@
+#include <stdio.h>
+
 /**
- * main -  Starting block
+ * main - Entry point for a program that prints hexadecimal numbers from 0 to F
  *
- * Return:  Success(0)
+ * Description: This program prints hexadecimal numbers from 0 to F
+ * (equivalent to 0-15 in decimal) in lowercase, separated by commas
+ * and spaces, and then ends with a newline character.
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-int num;
-int num2;
+    char hex[] = "0123456789abcdef"; // Array of hexadecimal digits
+    int i;
 
-for (num = '0'; num <= '9'; num++)
-{
-putchar(num);
-}
-for (num2 = 'a'; num2 <= 'f'; num21++)
-{
-putchar(num2);
-}
-putchar('\n');
-return (0);
+    for (i = 0; i < 16; i++)
+    {
+        putchar(hex[i]);
+
+        if (i != 15)
+        {
+            putchar(',');
+            putchar(' ');
+        }
+    }
+
+    putchar('\n');
+    return (0);
 }
