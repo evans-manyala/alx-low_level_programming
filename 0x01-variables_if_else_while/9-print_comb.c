@@ -1,25 +1,23 @@
 #include <stdio.h>
+
 /**
- * main -  Starting block
- *
- * Return:  Success(0)
+ * main - Starting block
+ * Description: Prints single digits separated by a comma and a space.
+ * Return: Success(0)
  */
 int main(void)
 {
-	int num = 0;
+    for (int x = 0; x < 10; x++)
+    {
+        putchar('0' + x);
 
-	while (num < 10)
-	{
-		putchar('0' + num);
+        if (x < 9)
+        {
+            putchar(',');
+            putchar(' ');
+        }
+    }
 
-		if (num < 9)
-		{
-			putchar(',');
-			putchar(' ');
-		}
-
-		num++;
-	}
-	putchar('\n');
-	return (0);
+    putchar('\n');
+    return (0);
 }
