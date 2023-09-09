@@ -8,7 +8,7 @@ int main(void)
 {
 char a2z = 'z';
 
-while (a2z <= 'a')
+while (a2z >= 'a')
 {
 putchar(a2z);
 a2z--;
