@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - Entry point for a program that prints hexadecimal numbers from 0 to F
  *
@@ -11,14 +10,10 @@
  */
 int main(void)
 {
-int hex;;
+int hex;
 for (hex = 0; hex <= 15; hex++)
 {
 printf("%x", hex);
-if (hex != 15)
-{
-printf(", ");
-}
 }
 printf("\n");
 return (0);
