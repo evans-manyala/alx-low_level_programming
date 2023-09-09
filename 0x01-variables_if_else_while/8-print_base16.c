@@ -11,11 +11,15 @@
  */
 int main(void)
 {
-char i;
-for (i = '0'; i <= 'f'; i++)
+int hex;;
+for (hex = 0; hex <= 15; hex++)
 {
-putchar(i);
+printf("%x", hex);
+if (hex != 15)
+{
+printf(", ");
 }
-putchar('\n');
+}
+printf("\n");
 return (0);
 }
