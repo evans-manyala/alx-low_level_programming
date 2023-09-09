@@ -5,20 +5,17 @@
  */
 int main(void)
 {
-	int num = 0;
-	int hex;
+int num;
+int num2;
 
-	while (num < 10)
-	{
-		putchar(num);
-		num++;
-	}
-
-	for (hex = 'a' ; hex <= 'f' ; hex++)
-	{
-		putchar(hex);
-	}
-
-	putchar('\n');
-	return (0);
+for (num = '0'; num <= '9'; num++)
+{
+putchar(num);
+}
+for (num2 = 'a'; num2 <= 'f'; num21++)
+{
+putchar(num2);
+}
+putchar('\n');
+return (0);
 }
