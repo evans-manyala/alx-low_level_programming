@@ -7,7 +7,6 @@
 int main(void)
 {
 char a2z = 'a';
-
 while (a2z <= 'z')
 {
 if (a2z == 'q' || a2z == 'e')
@@ -19,5 +18,5 @@ putchar(a2z);
 a2z++;
 }
 putchar('\n');
- return(0);
+return(0);
 }
