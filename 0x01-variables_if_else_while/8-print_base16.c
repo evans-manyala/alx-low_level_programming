@@ -5,19 +5,21 @@
  */
 int main(void)
 {
-int num1 = 0;
-int num2;
+	int num = 0;
+	int hex = 'a';
 
-while (num1 <= 9)
-{
-putchar('0' + num1);
-num1++;
-}
-while ( num2 <= 'f')
-{
-putchar(num2);
-num2++;
-}
-putchar('\n');
-return (0);
+	while (num < 10)
+	{
+		putchar('0' + num);
+		num++;
+	}
+
+	while (hex <='f')
+	{
+		putchar(hex);
+		hex++;
+	}
+
+	putchar('\n');
+	return (0);
 }
