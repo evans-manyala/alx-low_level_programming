@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - Starting block
  * Description: Prints single digits separated by a comma and a space.
@@ -8,17 +7,15 @@
 int main(void)
 {
 int x;
-    for (x = 0; x < 10; x++)
-    {
-        putchar('0' + x);
-
-        if (x < 9)
-        {
-            putchar(',');
-            putchar(' ');
-        }
-    }
-
-    putchar('\n');
-    return (0);
+for (x = 0; x < 10; x++)
+{
+putchar('0' + x);
+if (x < 9)
+{
+putchar(',');
+putchar(' ');
+}
+}
+putchar('\n');
+return (0);
 }
