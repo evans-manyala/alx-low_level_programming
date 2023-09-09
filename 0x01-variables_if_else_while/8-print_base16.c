@@ -11,20 +11,11 @@
  */
 int main(void)
 {
-    char hex[] = "0123456789abcdef"; // Array of hexadecimal digits
-    int i;
-
-    for (i = 0; i < 16; i++)
-    {
-        putchar(hex[i]);
-
-        if (i != 15)
-        {
-            putchar(',');
-            putchar(' ');
-        }
-    }
-
-    putchar('\n');
-    return (0);
+char i;
+for (i = '0'; i <= 'f'; i++)
+{
+putchar(i);
+}
+putchar('\n');
+return (0);
 }
