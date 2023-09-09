@@ -4,17 +4,17 @@
  *
  * Return: Success(0)
  */
-int main(void)
-{
-  char ch = 'a';
 
-  while (ch <= 'z')
+int main(void)
+
+{
+  char a_to_z = 'a';
+  while a_to_z <= 'z')
  {
-    putchar(ch);
-    ch++;
+    putchar(a_to_z);
+    a_to_z++;
   }
 
   putchar('\n');
-
-  return 0;
+  return (0);
 }
