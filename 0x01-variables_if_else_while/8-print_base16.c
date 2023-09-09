@@ -6,7 +6,7 @@
 int main(void)
 {
 	int num = 0;
-	int hex = 'a';
+	int hex;
 
 	while (num < 10)
 	{
@@ -14,10 +14,9 @@ int main(void)
 		num++;
 	}
 
-	while (hex <='f')
+	for (hex = 'a' ; hex <= 'f' ; hex++)
 	{
 		putchar(hex);
-		hex++;
 	}
 
 	putchar('\n');
