@@ -6,23 +6,26 @@
  */
 int main(void)
 {
-        int i, j;
+int x;
+int y;
+int z;
 
-        for (i = 0; i < 9 ; i++)
-        {
-                for (j = i + 1 ; j < 100 ; j++)
-                {
-                        putchar('0' + i);
-                        putchar('0' + j);
-                        if (i != 88 || j != 99)
-                        {
-                                putchar(',');
-                                putchar(' ');
-                        }
-
-                }
+for (x = '0'; x <= '7'; x++)
+{
+for (y = x + 1; y <= '9'; y++)
+{
+for (z = y + 1; z <= '9'; z++)
+{
+putchar(x);
+putchar(y);
+putchar(z);
+if (x == '7' && y == '8' && z == '9')
+break;
+putchar(',');
+putchar(' ');
 }
-
-        putchar('\n');
-        return (0);
+}
+}
+putchar('\n');
+return (0);
 }
