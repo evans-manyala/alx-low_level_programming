@@ -1,9 +1,9 @@
 #include "main.h"
-#include <stdio.h>
+#include <stdio.h>/
 /**
- * Main - Program starting block
- * Description: This script prints _putchar followed by a new line
- * Return : 0 (Success)
+ * main - Program starting block.
+ * Description: This script prints _putchar followed by a new line.
+ * Return: On success (0), returns character written.
  */
 int main(void)
 {
