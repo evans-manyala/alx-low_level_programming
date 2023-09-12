@@ -1,7 +1,19 @@
-#include <stdio.h>
-#include <main.h>
-
-int main() {
-  printf("_putchar\n");
-  return 0;
+#include "main.h"
+/**
+ * Main - Program starting block
+ * Description: This script prints _putchar followed by a new line
+ * Return : 0 (Success)
+ */
+int main (void)
+{
+	char var[8]="_putchar";
+	
+	int x;
+	
+	for(x=0; x<8; x++)
+	{
+		_putchar(var[x]);
+	}
+	_putchar('\n');
+	return (0);
 }
