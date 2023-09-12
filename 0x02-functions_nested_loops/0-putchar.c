@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>/
+#include <stdio.h>
 /**
  * main - Program starting block.
  * Description: This script prints _putchar followed by a new line.
