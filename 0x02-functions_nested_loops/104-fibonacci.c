@@ -7,17 +7,13 @@
 
 int main(void)
 {
-	long long f1 = 0, f2 = 1, n, i;
+	unsigned long f1 = 0, f2 = 1, n;
+	int i;
 
 	for (i = 0; i < 98; i++)
 	{
 		n = f1 + f2;
-
-		if (n < 0)
-		{
-			break;
-		}
-
+	}
 		printf("%d, ", n);
 		f1 = f2;
 		f2 = n;
