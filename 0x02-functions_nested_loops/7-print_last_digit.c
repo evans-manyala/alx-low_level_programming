@@ -15,6 +15,6 @@ int print_last_digit(int n)
 	else
 		rightmost_digit = (n % 10);
 
-	_putchar(rightmost_digit);
+	_putchar(48 + rightmost_digit);
 	return (rightmost_digit);
 }
