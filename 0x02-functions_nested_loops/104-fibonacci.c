@@ -9,8 +9,6 @@ int main(void)
 {
 int f1 = 0, f2 = 1, n, i;
 
-printf("The first 98 Fibonacci numbers are: ");
-
 for (i = 0; i < 98; i++)
 {
 n = f1 + f2;
