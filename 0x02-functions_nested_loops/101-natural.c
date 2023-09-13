@@ -17,7 +17,7 @@ int main(void)
 		n++;
 	}
 
-	printf("Sum is :%d\n",sum);
+	printf("%d\n",sum);
 	return (0);
 }
 
