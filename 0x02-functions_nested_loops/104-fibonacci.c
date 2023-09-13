@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	lon long f1 = 0, f2 = 1, n, i;
+	long long f1 = 0, f2 = 1, n, i;
 
 	for (i = 0; i < 98; i++)
 	{
