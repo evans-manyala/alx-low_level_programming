@@ -5,16 +5,14 @@
  *
  * Return: last digit of a number
  */
-
 int print_last_digit(int n)
 {
-	int rightmost_digit;
+	int rightmost_digit = n % 10;
 
-	if (n < 0)
-		rightmost_digit = ((-1 * n) % 10);
-	else
-		rightmost_digit = (n % 10);
-
-	_putchar(48 + rightmost_digit);
+	if (rightmost_digit < 0)
+	{
+		rightmost_digit = rightmost_digit * -1;
+	}
+	_putchar(rightmost_digit);
 	return (rightmost_digit);
 }
