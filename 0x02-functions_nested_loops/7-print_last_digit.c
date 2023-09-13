@@ -8,7 +8,12 @@
 
 int print_last_digit(int n)
 {
-	int rightmost_digit = n % 10;
+	int rightmost_digit;
+
+	if (n < 0)
+		rightmost_digit = ((-1 * n) % 10);
+	else
+		rightmost_digit = (n % 10);
 
 	_putchar(rightmost_digit);
 	return (rightmost_digit);
