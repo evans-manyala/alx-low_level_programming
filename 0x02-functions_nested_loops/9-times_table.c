@@ -1,6 +1,4 @@
 #include "main.h"
-typedef int make_iso_compilers_happy;
-
 /**
  * times_table - Prints the 9 times table starting with 0
  *
@@ -28,6 +26,7 @@ void times_table(void)
 				{
 					_putchar(' ');
 					_putchar(result + '0');
+					_putchar(' ');
 				}
 			else
 			{
