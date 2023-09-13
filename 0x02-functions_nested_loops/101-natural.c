@@ -14,11 +14,10 @@ int main(void)
 		{
 			sum = sum + n;
 		}
+		n++;
 	}
 
-	n++;
-
-	printf(sum);
+	printf("Sum is :%d\n",sum);
 	return (0);
 }
 
