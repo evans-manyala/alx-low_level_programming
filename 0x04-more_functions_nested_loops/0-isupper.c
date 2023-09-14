@@ -4,7 +4,6 @@
  * @c: Character being tested to see if its uppercase.
  * Return: 1 is UPPERCASE else 0.
  */
-
 int _isupper(int c)
 {
 	if (c >= 65 && c <= 90)
