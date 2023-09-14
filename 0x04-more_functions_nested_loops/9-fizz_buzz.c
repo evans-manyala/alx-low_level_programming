@@ -12,21 +12,20 @@ for (x1 = 1; x1 <= 100; x1++)
 {
 if (x1 % 3 == 0 && x1 % 5 == 0)
 {
-printf(" FizzBuzz ");
+printf("FizzBuzz ");
 }
 else if (x1 % 3 == 0)
 {
-printf(" Fizz ");
+printf("Fizz ");
 }
 else if (x1 % 5 == 0)
 {
-printf(" Buzz ");
+printf("Buzz ");
 }
 else
 {
 printf("%d", +x1);
 }
 }
-printf("\n");
 return (0);
 }
