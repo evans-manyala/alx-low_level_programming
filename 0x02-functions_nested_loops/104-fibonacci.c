@@ -5,21 +5,22 @@
  *
  *
  */
+#include <stdio.h>
+
 int main(void)
 {
-unsigned long int f1 = 1, f2 = 1, n;
+unsigned int f1 = 1, f2 = 2;
+unsigned int n;
 int i;
-printf("1, 1, ");
-
-for (i = 2; i < 96; i++)
+printf("1, 2, ");
+for (i = 2; i < 96; i++) // Print the next 96 numbers
 {
 n = f1 + f2;
-printf("%lu, ", n);
+printf("%u, ", n);
 f1 = f2;
 f2 = n;
 }
 n = f1 + f2;
-printf("%lu, %lu\n", n, n + f2);
+printf("%u, %u\n", n, n + f2);
 return (0);
 }
-
