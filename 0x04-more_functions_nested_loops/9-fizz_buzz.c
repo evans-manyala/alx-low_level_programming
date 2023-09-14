@@ -10,21 +10,23 @@ int main(void)
 int x1;
 for (x1 = 1; x1 <= 100; x1++)
 {
-if (x1 % 3 == 0)
+if (x1 % 3 == 0 && x1 % 5 == 0)
 {
-printf("Fizz");
-printf(" ");
+printf(" FizzBuzz");
+}
+else if (x1 % 3 == 0)
+{
+printf(" Fizz");
 }
 else if (x1 % 5 == 0)
 {
-printf("FizBuzz");
-printf(" ");
+printf(" Buzz");
 }
 else
 {
 printf("%d", +x1);
-printf(" ");
 }
 }
+printf("\n");
 return (0);
 }
