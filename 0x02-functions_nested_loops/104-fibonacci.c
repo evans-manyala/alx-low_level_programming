@@ -13,10 +13,14 @@ int main(void)
 	for (i = 0; i < 98; i++)
 	{
 		n = f1 + f2;
-	}
 		printf("%lud, ", n);
-		f1 = f2;
-		f2 = n;
+
+		if (i != 97)
+		{
+			printf(", ");
+			f1 = f2;
+			f2 = n;
+		}
 	}
 
 	printf("\n");
