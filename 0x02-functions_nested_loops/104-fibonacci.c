@@ -7,16 +7,14 @@
  */
 int main(void)
 {
-int i;
-int prev = 1;
-int curr = 2;
+unsigned long i, prev = 1, curr = 2;
 
-printf("%d, %d", prev, curr);
+printf("%lu, %lu", prev, curr);
 
 for (i = 2; i < 98; i++)
 {
 int next = prev + curr;
-printf(", %d", next);
+printf(", %lu", next);
 
 prev = curr;
 curr = next;
