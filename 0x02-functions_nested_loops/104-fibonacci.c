@@ -5,8 +5,6 @@
  *
  *
  */
-#include <stdio.h>
-
 int main(void)
 {
 unsigned int f1 = 1, f2 = 2;
