@@ -13,7 +13,7 @@ int main(void)
 	for (i = 0; i < 98; i++)
 	{
 		n = f1 + f2;
-		printf("%lu", n);
+		printf("%lu%c ", n);
 
 		if (i != 97)
 		{
