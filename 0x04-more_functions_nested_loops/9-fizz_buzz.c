@@ -7,25 +7,33 @@
  */
 int main(void)
 {
-int x1;
-for (x1 = 1; x1 <= 100; x1++)
-{
-if (x1 % 3 == 0 && x1 % 5 == 0)
-{
-printf("FizzBuzz ");
-}
-else if (x1 % 3 == 0)
-{
-printf("Fizz ");
-}
-else if (x1 % 5 == 0)
-{
-printf("Buzz ");
-}
-else
-{
-printf("%d", +x1);
-}
-}
-return (0);
+	int x1;
+
+	for (x1 = 1; x1 <= 100; x1++)
+	{
+		if (x1 % 3 == 0 && x1 % 5 == 0)
+		{
+			printf("FizzBuzz");
+		}
+		else if (x1 % 3 == 0)
+		{
+			printf("Fizz");
+		}
+		else if (x1 % 5 == 0)
+		{
+			printf("Buzz");
+		}
+		else
+		{
+			printf("%d", x1);
+		}
+		if (x1 < 100)
+		{
+			printf(" ");
+		}
+	}
+
+	printf("\n");
+
+	return (0);
 }
