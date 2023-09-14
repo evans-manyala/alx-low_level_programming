@@ -7,7 +7,7 @@
 
 int main(void)
 {
-unsigned long f1 = 0, f2 = 1, n;
+unsigned long int f1 = 0, f2 = 1, n;
 int i;
 
 for (i = 0; i < 97; i++)
@@ -18,5 +18,5 @@ f1 = f2;
 f2 = n;
 }
 printf("%lu\n", f1 + f2);
-return 0;
+return (0);
 }
