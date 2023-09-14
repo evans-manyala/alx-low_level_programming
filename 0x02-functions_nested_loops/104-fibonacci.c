@@ -13,7 +13,7 @@ unsigned int f1 = 1, f2 = 2;
 unsigned int n;
 int i;
 printf("1, 2, ");
-for (i = 2; i < 96; i++) // Print the next 96 numbers
+for (i = 2; i < 96; i++)
 {
 n = f1 + f2;
 printf("%u, ", n);
