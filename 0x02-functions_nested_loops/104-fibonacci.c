@@ -14,7 +14,7 @@ int main(void)
 	{
 		n = f1 + f2;
 	}
-		printf("%d, ", n);
+		printf("%lud, ", n);
 		f1 = f2;
 		f2 = n;
 	}
