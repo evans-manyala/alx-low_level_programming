@@ -7,18 +7,22 @@
  */
 int main(void)
 {
-unsigned int f1 = 1, f2 = 2;
-unsigned int n;
 int i;
-printf("1, 2, ");
-for (i = 2; i < 96; i++)
+int prev = 1;
+int curr = 2;
+
+printf("%d, %d", prev, curr);
+
+for (i = 2; i < 98; i++)
 {
-n = f1 + f2;
-printf("%u, ", n);
-f1 = f2;
-f2 = n;
+int next = prev + curr;
+printf(", %d", next);
+
+prev = curr;
+curr = next;
 }
-n = f1 + f2;
-printf("%u, %u\n", n, n + f2);
+
+printf("\n");
+
 return (0);
 }
