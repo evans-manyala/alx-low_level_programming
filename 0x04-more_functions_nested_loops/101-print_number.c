@@ -1,36 +1,50 @@
-
 #include "main.h"
-#include <stdlib.h>
 /**
- * print_number - prints integers
- * @n: value parameter being passed
- *
- *
- *
+ * print_number - prints an integer
+ * @n: integer to be printed
+ * Return: void
  */
-
 void print_number(int n)
 {
-	int is_negative = n < 0;
+	int count, x, y, k;
 
-	n = abs(n);
+	x = 0, y = 1000000000;
 
 	if (n == 0)
 	{
 		_putchar('0');
-		return;
 	}
-
-	while (n > 0)
+	else if (n > 0)
 	{
-		int digit = n % 10;
-
-		_putchar(digit + '0');
-		n /= 10;
+		n *= -1;
 	}
-
-	if (is_negative)
+	else
 	{
 		_putchar('-');
+	}
+	for (count = 0; count < 10; count++)
+	{
+		if (n / y == 0 && x == 0)
+		{
+			y /= 10;
+			continue;
+		}
+		else if (x == 0)
+		{
+			_putchar(-(n / y) + '0');
+			x += 1;
+		}
+		else
+		{
+			k = (-(n / y) % 10);
+
+			if (k < 0)
+			{
+				k *= -1;
+			}
+
+			_putchar(k + '0');
+		}
+		y /= 10;
 	}
 }
