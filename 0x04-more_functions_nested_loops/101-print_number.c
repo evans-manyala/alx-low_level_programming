@@ -6,25 +6,21 @@
   *
   * Return: Nothing!
   */
+
 void print_number(int n)
 {
-	unsigned int x1;
+	unsigned int num;
 
-	x1 = n;
+	num = n;
 
 	if (n < 0)
 	{
-		n = n * -1;
-		x1 = n;
 		_putchar('-');
+		num = n * -1;
 	}
 
-	x1 = x1 / 10;
+	if (num > 9)
+		print_number(num / 10);
 
-	if (x1 != 0)
-	{
-		print_number(x1);
-	}
-
-	_putchar((unsigned int) n % 10 + '0');
+	_putchar(num % 10 + '0');
 }
