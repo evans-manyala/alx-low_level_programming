@@ -14,28 +14,23 @@ int _atoi(char *s)
 	{
 		x1++;
 	}
-
 	if (s[x1] == '-')
 	{
 		yield -= 1;
 		x1++;
 	}
-
 	else if (s[x1] == '+')
 	{
 		x1++;
 	}
-
 	while (s[x1] >= '0' && s[x1] <= '9')
 	{
 		if (rslt > (INT_MAX - (s[x1] - '0')) / 10)
 		{
-			return ((yield == 1) ? INT_MAX: INT_MIN);
+			return ((yield == 1) ? INT_MAX : INT_MIN);
 		}
-
 		rslt = rslt * 10 + (s[x1] - '0');
 		x1++;
 		}
-
 	return (yield * rslt);
 }
