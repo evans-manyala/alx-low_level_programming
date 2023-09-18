@@ -10,12 +10,17 @@
 
 void puts2(char *str)
 {
-	int length = strlen(str);
-	int i;
+	int i = 0;
 
-	for (i = 0; i < length; i++)
+	if (str == NULL)
+	{
+		return;
+	}
+
+	while (str[i] != '\n')
 	{
 		putchar(str[i]);
+		i++;
 	}
 
 	putchar('\n');
