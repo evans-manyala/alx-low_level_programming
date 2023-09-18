@@ -4,16 +4,18 @@
 /**
  * rev_string - Prints a string in reverse.
  * @s: string to be printed in reverse.
- *Return: void
+ * Return: void
  */
 
 void rev_string(char *s)
 {
-	int length = strlen(s);
-	int i;
+	int length = strlen(s), i, j;
+	char tmp;
 
-	for (i = length - 1; i >= 0; i--)
+	for (i = 0, j = length - 1; i < j; i++, j--)
 	{
-		putchar(s[i]);
+		tmp = s[i];
+		s[i] = s[j];
+		s[j] = tmp;
 	}
 }
