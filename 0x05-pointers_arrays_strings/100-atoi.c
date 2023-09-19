@@ -1,10 +1,8 @@
 #include "main.h"
 /**
- * _atoi - Sxxxcxcxcx
+ * _atoi - convert a string to an integer.
  * @s: Point variable to be parsed.
- * Return: vo
- *
- *
+ * Return: results of the conversion.
  */
 
 int _atoi(char *s)
