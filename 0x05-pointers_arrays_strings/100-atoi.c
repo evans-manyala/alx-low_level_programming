@@ -16,9 +16,13 @@ int _atoi(char *s)
 			s++;
 			continue;
 		}
-		if (*s == '-')
+		if (*s == '-' || *s == '+')
 		{
-			sign = -1;
+			if (*s == '-')
+			{
+				sign *= -1;
+			}
+			s++;
 		}
 		else if (*s >= '0' && *s <= '9')
 		{
