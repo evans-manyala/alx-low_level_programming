@@ -7,42 +7,42 @@
  */
 int _atoi(char *s)
 {
-    int sign = 1, digit, result = 0;
+	int sign = 1, digit, result = 0;
 
-    while (*s != '\0')
-    {
-	    if (*s == ' ')
-	    {
-		    s++;
-		    continue;
-	    }
-	    if (*s == '-')
-	    {
-		    sign = -1;
-	    }
-	    else if (*s == '+')
-	    {
-		    break;
-	    }
-	    else if (*s >= '0' && *s <= '9')
-	    {
-		    digit = 1;
-		    
-		    if (result > (INT_MAX - (*s - '0')) / 10)
-		    {
-			    return (sign == 1) ? INT_MAX : INT_MIN;
-		    }
-		    result = result * 10 + (*s - '0');
-	    }
-	    else
-	    {
-		    break;
-	    }
-	    s++;
-    }
-    if (!digit)
-    {
-	    return (0);
-    }
-    return (sign * result);
+	while (*s != '\0')
+	{
+		if (*s == ' ')
+		{
+			s++;
+			continue;
+		}
+		if (*s == '-')
+		{
+			sign = -1;
+		}
+		else if (*s == '+')
+		{
+			break;
+		}
+		else if (*s >= '0' && *s <= '9')
+		{
+			digit = 1;
+
+			if (result > (INT_MAX - (*s - '0')) / 10)
+			{
+				return ((sign == 1) ? INT_MAX : INT_MIN);
+			}
+			result = result * 10 + (*s - '0');
+		}
+		else
+		{
+			break;
+		}
+		s++;
+	}
+	if (!digit)
+	{
+		return (0);
+	}
+	return (sign * result);
 }
