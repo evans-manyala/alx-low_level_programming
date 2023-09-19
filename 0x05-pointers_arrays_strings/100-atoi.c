@@ -10,7 +10,7 @@ int _atoi(char *s)
 	int rslt = 0;
 	int x1 = 0;
 	int sgn = 1;
-	
+
 	while (s[x1] == ' ')
 	{
 		x1++;
