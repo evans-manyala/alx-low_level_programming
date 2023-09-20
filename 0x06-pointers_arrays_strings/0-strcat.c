@@ -6,11 +6,11 @@
  * Return: Final string after concatenation.
  */
 
-char *_strcat(char *dest, const char *src)
+char *_strcat(char *dest, char *src)
 {
 	int x1 = 0;
 
-	while (dest[i] != '\0')
+	while (dest[x1] != '\0')
 	{
 		x1++;
 	}
@@ -20,7 +20,7 @@ char *_strcat(char *dest, const char *src)
 		dest[x1++] = *src++;
 	}
 
-	dest[i] = '\0';
+	dest[x1] = '\0';
 
-	return dest;
+	return (dest);
 }
