@@ -7,20 +7,21 @@
  * Return: string value encoded.
  *
  */
-
 char *leet(char *string)
 {
 	char *origin_table = "aAeEoOtTlL";
 	char *replacements_table = "44370171";
-	int x;
+	int x, y;
 
 	for (x = 0; string[x] != '\0'; x++)
 	{
-		char *found = strchr(origin_table, string[x]);
-
-		if (found != NULL)
+		for (y = 0; origin_table[x] != '\0'; y++)
 		{
-			string[x] = replacements_table[found - origin_table];
+			if (string[x] == origin_table[y])
+			{
+				string[x] = replacements_table[y];
+				break;
+			}
 		}
 	}
 
