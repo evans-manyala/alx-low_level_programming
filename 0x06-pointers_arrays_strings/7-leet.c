@@ -1,4 +1,6 @@
 #include "main.h"
+#include <string.h>
+#include <stddef.h>
 /**
  * leet - Function that encodes a string into 1337.
  * @string: value being encoded into string.
@@ -8,18 +10,19 @@
 
 char *leet(char *string)
 {
+	char *origin_table = "aAeEoOtTlL";
+	char *replacements_table = "44370171";
 	int x;
 
 	for (x = 0; string[x] != '\0'; x++)
 	{
-	if (string[x] == 'a' || string[x] == 'A' ||
-			string[x] == 'e' || string[x] == 'E' ||
-			string[x] == 'o' || string[x] == 'O' ||
-			string[x] == 't' || string[x] == 'T' ||
-			string[x] == 'l' || string[x] == 'L')
-	{
-		string[x] += 4;
+		char *found = strchr(origin_table, string[x]);
+
+		if (found != NULL)
+		{
+			string[x] = replacements_table[found - origin_table];
+		}
 	}
-	}
+
 	return (string);
 }
