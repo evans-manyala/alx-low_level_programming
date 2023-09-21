@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 /**
  * rot13- Prints a string using rot13.
  * @string: string to be printed.
@@ -7,19 +8,21 @@
 
 char *rot13(char *string)
 {
-	char *pointer = string;
+	int x, y;
+	y = strlen(string);
 
-	while (*pointer != '\0')
+	for (x = 0; x < y; x++)
 	{
-		if ((*pointer >= 'A' && *pointer <= 'Z') ||
-				(*pointer >= 'a' && *pointer <= 'z'))
+		if ((string[x] >= 'a' && string[x] <= 'z') ||
+				(string[x] >= 'A' && string[x] <= 'Z'))
 		{
-			char b = (*pointer >= 'a') ? 'a' : 'A';
-			*pointer = (*pointer - b + 13) % 26 + b;
+			string[x] += 13;
+
+			if (string[x] > 'z')
+			{
+				string[x] -= 26;
+			}
 		}
-
-		pointer++;
 	}
-
 	return (string);
 }
