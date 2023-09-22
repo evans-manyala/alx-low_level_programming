@@ -8,21 +8,19 @@
 
 char *rot13(char *string)
 {
-	int x, y;
-	y = strlen(string);
+	char *pointer = string;
 
-	for (x = 0; x < y; x++)
+	while (*pointer != '\0')
 	{
-		if ((string[x] >= 'a' && string[x] <= 'z') ||
-				(string[x] >= 'A' && string[x] <= 'Z'))
+		if ((*pointer >= 'A' && *pointer <= 'Z') ||
+				(*pointer >= 'a' && *pointer <= 'z'))
 		{
-			string[x] += 13;
-
-			if (string[x] > 'z')
-			{
-				string[x] -= 26;
-			}
+			char b = (*pointer >= 'a') ? 'a' : 'A';
+			*pointer = (*pointer - b + 13) % 26 + b;
 		}
+
+		pointer++;
 	}
+
 	return (string);
 }
