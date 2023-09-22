@@ -10,7 +10,7 @@ int main(void)
 
 	p = &n;
 
-	*(*p + 2) = 98;
+	*p = 98;
 
 	printf("a[2] = %d\n", a[2]);
 
