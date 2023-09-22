@@ -2,25 +2,23 @@
 #include <string.h>
 /**
  * rot13- Prints a string using rot13.
- * @string: string to be printed.
+ * @a: string to be printed.
  * Return: String output.
  */
-
-char *rot13(char *string)
+char *rot13(char *a)
 {
-	char *pointer = string;
+	int x1, y, k;
+	char aToz[] = "AaZz";
+	char r_robin[] = "NOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	while (*pointer != '\0')
-	{
-		if ((*pointer >= 'A' && *pointer <= 'Z') ||
-				(*pointer >= 'a' && *pointer <= 'z'))
+	for (x1 = 0; *(a + x1) != '\0'; x1++)
+		for (y = 0; y < 2; y++)
 		{
-			char b = (*pointer >= 'a') ? 'a' : 'A';
-			*pointer = (*pointer - b + 13) % 26 + b;
+			if (*(a + x1) >= aToz[y] && *(a + x1) <= aToz[y + 2])
+			{
+				k = (*(a + x1) - 65 - (y * 32));
+				*(a + x1) = (r_robin[k] + (y * 32));
+			}
 		}
-
-		pointer++;
-	}
-
-	return (string);
+	return (a);
 }
