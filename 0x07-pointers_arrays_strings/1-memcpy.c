@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stddef.f>
+#include <stddef.h>
 /**
  * _memcpy - Functions copeies memory area.
  * @dest: A pointer to the destination memory address.
