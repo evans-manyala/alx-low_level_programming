@@ -1,25 +1,20 @@
-#include "main.h"
 #include <string.h>
+#include "main.h"
 /**
- * infinite_add - Function that adds two numbers.
- * @n1: First string.
- * @n2: Second string.
+ * infinite_add - Adds two numbers.
+ * @n1: The first number.
+ * @n2: The second number.
  * @r: The result buffer.
  * @size_r: The size of the result buffer.
- * Return: A pointer to the result buffe
- * the buffer
+ * Return: A pointer to the result buffer.
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int carry_over, x, y, z = 0, len1, len2, num1, num2, result;
-	int start, stop;
-	char buffer;
+	int carry_over, z = 0;
+	int x, y, num1 , num2, sum;
 
-	len1 = strlen(n1);
-	len2 = strlen(n2);
-	x = len1 - 1;
-	y = len2 - 1;
-	z = 0;
+	x = strlen(n1) - 1;
+	y = strlen(n2) - 1;
 
 	memset(r, '0', size_r);
 	r[size_r - 1] = '\0';
@@ -28,30 +23,35 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	{
 		if (z >= size_r - 1)
 		{
-			return (0);
+			return (NULL);
 		}
 
 		num1 = (x >= 0) ? n1[x] - '0' : 0;
 		num2 = (y >= 0) ? n2[y] - '0' : 0;
-		result = num1 + num2 + carry_over;
-		carry_over = result / 10;
-		r[z] = (result % 10) + '0';
+		sum = num1 + num2 + carry_over;
+
+		carry_over = sum / 10;
+		r[z] = (sum % 10) + '0';
 		x--;
 		y--;
 		z++;
 	}
 
-	start = 0;
-	stop = z - 1;
-
-	while (start < stop)
-	{
-		buffer = r[start];
-		r[start] = r[stop];
-		r[stop] = buffer;
-		start++;
-		stop--;
-	}
-
+	reverse_string(r, z);
 	return (r);
+}
+void reverse_string(char *str, int len)
+{
+	int start = 0;
+	int end = len - 1;
+
+	while (start < end)
+	{
+		char temp = str[start];
+
+		str[start] = str[end];
+		str[end] = temp;
+		start++;
+		end--;
+	}
 }
