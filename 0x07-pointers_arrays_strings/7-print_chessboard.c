@@ -7,15 +7,15 @@ void print_chessboard(char (*a)[8])
 {
 	unsigned int x, y = 0;
 
-	while (x < 8)
+	while (x < 64)
 	{
-		while (y < 8)
+		if (x % 8 == 0 && x != 0)
 		{
-			_putchar(a[x][y]);
-			y++;
+			y = x;
+			_putchar('\n');
 		}
-
-		_putchar('\n');
+		_putchar(a[x / 8][x-y]);
 		x++;
 	}
+	_putchar('\n');
 }
