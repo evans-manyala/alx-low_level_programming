@@ -16,6 +16,6 @@ void print_diagsums(int *a, int size)
 		sec_sum += a[x * size + size - x - 1];
 		x++;
 	}
-	printf("sum of the 1st diagonal is: %d\n", pri_sum);
-	printf("sum of the 2dn diagonal is: %d\n", sec_sum);
+	printf("%d\n", pri_sum + sec_sum);
+
 }
