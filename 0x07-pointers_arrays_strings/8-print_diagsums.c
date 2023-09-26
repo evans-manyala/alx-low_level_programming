@@ -8,7 +8,8 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int x, pri_sum, sec_sum = 0;
+	unsigned int pri_sum, sec_sum = 0;
+	int x;
 
 	while (x < size)
 	{
@@ -16,6 +17,6 @@ void print_diagsums(int *a, int size)
 		sec_sum += a[x * size + size - x - 1];
 		x++;
 	}
-	printf("%d\n", pri_sum + sec_sum);
+	printf("%d, %d\n", pri_sum, sec_sum);
 
 }
