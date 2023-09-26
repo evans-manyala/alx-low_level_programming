@@ -14,7 +14,7 @@ void print_diagsums(int *a, int size)
 	while (x < size)
 	{
 		pri_sum += a[(x * size) + x];
-		sec_sum += a[(size * (x + 1)) - (x + 1)];
+		sec_sum += a[size - x - 1];
 		x++;
 	}
 
