@@ -12,12 +12,15 @@ int is_palindrome(char *s)
 	{
 		return (1);
 	}
-	else if (strlen(s) <= 1)
+	if (strlen(s) <= 1)
 	{
 		return (1);
 	}
-	else
+
+	while (*s == ' ')
 	{
-		return (s[0] == s[strlen(s) - 1] && is_palindrome(s + 1));
+		s++;
 	}
+
+	return (s[0] == s[strlen(s) - 1] && is_palindrome(s + 1));
 }
