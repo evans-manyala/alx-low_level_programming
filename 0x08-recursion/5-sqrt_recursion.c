@@ -26,6 +26,7 @@ int _sqrt_recursion(int n)
 /**
  * _sqrt_helper_function - Function calculates the square root recusively.
  * @n: base number to calculate square root of.
+ * @num1:  Current square root guess pattern.
  * Return: Square root of 'n'.
  */
 
