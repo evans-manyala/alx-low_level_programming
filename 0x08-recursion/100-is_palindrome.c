@@ -17,10 +17,5 @@ int is_palindrome(char *s)
 		return (1);
 	}
 
-	while (*s == ' ')
-	{
-		s++;
-	}
-
 	return (s[0] == s[strlen(s) - 1] && is_palindrome(s + 1));
 }
