@@ -31,7 +31,7 @@ SOURCE_FILES=(
 for source_file in "${SOURCE_FILES[@]}"; do
     object_file="${source_file%.c}.o"
     gcc -c "$SOURCE_DIR/$source_file" -o "$object_file"
-    ar rcs lliball.a "$object_file"
+    ar rcs liball.a "$object_file"
 done
 
 echo "Static library libmy.a created successfully!"
