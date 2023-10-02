@@ -1,1 +1,1 @@
-Welcome to this REPO. There are scripts herein about Recursion in C programming. Enjoy
+Welcome to this REPO. It contains scripts that utilize the malloc() function
