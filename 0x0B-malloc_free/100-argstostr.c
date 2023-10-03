@@ -26,8 +26,6 @@ char *argstostr(int ac, char **av)
 		str_length += strlen(av[x]) + 1;
 	}
 
-	str_length += ac + 1;
-
 	new_string = (char *)malloc(str_length);
 
 	if (new_string == NULL)
@@ -45,7 +43,7 @@ char *argstostr(int ac, char **av)
 		pos++;
 	}
 
-	new_string[pos] = '\0';
+	new_string[pos - 1] = '\0';
 
 	return (new_string);
 }
