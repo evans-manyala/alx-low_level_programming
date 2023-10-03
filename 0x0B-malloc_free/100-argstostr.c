@@ -37,9 +37,8 @@ char *argstostr(int ac, char **av)
 	{
 		strcpy(new_string + pos, av[x]);
 		pos += strlen(av[x]);
-		new_string[pos] = '\n';
-		pos++;
+		new_string[pos++] = '\n';
 	}
-	new_string[pos + 1] = '\0';
+
 	return (new_string);
 }
