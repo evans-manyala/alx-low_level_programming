@@ -18,15 +18,16 @@ char *argstostr(int ac, char **av)
 	{
 		return (NULL);
 	}
-
 	str_length = 0;
 
 	for (x = 0; x < ac; x++)
 	{
-		str_length += strlen(av[x]) + 1;
+		if (av[x] != NULL)
+		{
+			str_length += strlen(av[x]) + 1;
+		}
 	}
-
-	new_string = (char *)malloc(str_length);
+	new_string = malloc(str_length);
 
 	if (new_string == NULL)
 	{
@@ -37,13 +38,13 @@ char *argstostr(int ac, char **av)
 
 	for (x = 0; x < ac; x++)
 	{
-		memcpy(new_string + pos, av[x], strlen(av[x]));
+		if (av[x] != NULL)
+		{
+			strcpy(new_string + pos, av[x]);
 		pos += strlen(av[x]);
-		new_string[pos] = '\n';
-		pos++;
+		new_string[pos++] = '\n';
+		}
 	}
-
-	new_string[pos - 1] = '\0';
-
+	new_string[pos + 1] = '\0';
 	return (new_string);
 }
