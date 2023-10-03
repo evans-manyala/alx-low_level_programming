@@ -37,7 +37,7 @@ char *argstostr(int ac, char **av)
 
 	for (x = 0; x < ac; x++)
 	{
-		strcpy(new_string + pos, av[x]);
+		memcpy(new_string + pos, av[x], strlen(av[x]));
 		pos += strlen(av[x]);
 		new_string[pos] = '\n';
 		pos++;
