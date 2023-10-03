@@ -43,7 +43,7 @@ char *argstostr(int ac, char **av)
 		pos++;
 	}
 
-	new_string[pos + 1] = '\0';
+	new_string[pos] = '\0';
 
 	return (new_string);
 }
