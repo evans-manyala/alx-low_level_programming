@@ -8,7 +8,7 @@
 size_t print_list(const list_t *h)
 {
 	size_t cnt = 0;
-	const node_t *pos = h->head;
+	const list_t *pos = h;
 
 	while (pos != NULL)
 	{
