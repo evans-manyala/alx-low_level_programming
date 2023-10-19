@@ -15,9 +15,10 @@ size_t print_list(const list_t *h)
 		if (pos->str == NULL)
 			printf("[0] (nil)\n");
 		else
-			printf("%s\n", pos->str);
+			printf("[%u] %s\n", pos->len, pos->str);
 		pos = pos->next;
 		cnt++;
 	}
+	printf("-> %lu elements\n", cnt);
 	return (cnt);
 }
