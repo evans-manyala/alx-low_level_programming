@@ -1,20 +1,19 @@
 #include "lists.h"
 
 /**
- * main - function prints the poem "You're beat! and yet,
+ * poem - function prints the poem "You're beat! and yet,
  * you must allow, \nI bore my house upon my back!\n".
- * Return: 0 if successful.
  */
 
-int main(void)
+void poem()
 {
-	list_t *n;
+	list_t *head = NULL, *n;
 
 	n = malloc(sizeof(list_t));
 	n->str = POEM;
 	n->next = NULL;
 
-	list_t *head = n;
+	head = n;
 
 	while (head != NULL)
 	{
@@ -23,7 +22,4 @@ int main(void)
 	}
 
 	free_list(head);
-
-	return (0);
-
 }
