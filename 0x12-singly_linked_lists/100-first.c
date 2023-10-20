@@ -4,8 +4,7 @@
  * poem - function prints the poem "You're beat! and yet,
  * you must allow, \nI bore my house upon my back!\n".
  */
-
-void poem()
+void poem(void)
 {
 	list_t *head = NULL, *n;
 
