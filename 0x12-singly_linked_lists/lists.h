@@ -1,5 +1,6 @@
 #ifndef LISTS_H
 #define LISTS_H
+#define POEM "You're beat! and yet, you must allow,\nI bore my house upon my back!\n"
 
 #include <stdio.h>
 #include <stddef.h>
