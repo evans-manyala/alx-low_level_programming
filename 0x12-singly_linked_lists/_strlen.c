@@ -1,9 +1,9 @@
 #include <string.h>
 
 /**
- * _strlen - find string length
- * @str: string
- * Return: length
+ * _strlen - Function returns string length
+ * @str: string pointer
+ * Return: length of string.
  */
 int _strlen(const char *str)
 {
