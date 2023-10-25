@@ -13,11 +13,10 @@ size_t free_listint_safe(listint_t **h)
 	{
 		t = *h;
 		*h = (*h)->next;
+		t->next = NULL;
 
 		free(t);
 		x++;
 	}
-
-	*h = NULL;
 	return (x);
 }
