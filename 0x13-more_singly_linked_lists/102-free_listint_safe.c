@@ -18,5 +18,6 @@ size_t free_listint_safe(listint_t **h)
 		free(t);
 		x++;
 	}
+	*h = NULL;
 	return (x);
 }
