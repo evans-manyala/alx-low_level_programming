@@ -13,7 +13,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t bytes_read;
 	FILE *fp;
 
-	if (filename == NULL)
+	if (filename == NULL || buffer == NULL)
 	{
 		free(buffer);
 		return (0);
@@ -30,13 +30,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	bytes_read = fread(buffer, 1, letters, fp);
 	fclose(fp);
 
-	if (bytes_read < 0)
+	if (bytes_read < 0 || ferror(fp))
 	{
 		free(buffer);
 		return (0);
 	}
 
 	fwrite(buffer, 1, bytes_read, stdout);
+	fflush(stdout);
 	free(buffer);
+
 	return (bytes_read);
 }
