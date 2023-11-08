@@ -127,6 +127,11 @@ void print_VER(byte *elf_id)
 	}
 	printf("\n");
 }
+/**
+ * print_OS_ABI - Function Identifies the operating system and
+ * ABI for which the file was created.
+ * @elf_id: Pointer array for OS_ABI.
+ */
 
 void print_OS_ABI(byte *elf_id)
 {
@@ -168,6 +173,11 @@ void print_OS_ABI(byte *elf_id)
 			printf("<unknown: %x>\n", elf_id[EI_OSABI]);
 	}
 }
+
+/**
+ * print_ABI - Function prints the ABI version
+ * @elf_id: Pointer array for ELF ABI version.
+ */
 
 void print_ABI(byte *elf_id)
 {
