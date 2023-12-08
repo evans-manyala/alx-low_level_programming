@@ -26,16 +26,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h,
 		pos = pos->next;
 		x++;
 	}
-	if (!pos && idx != 0)
-		return (NULL);
-	if (!*h)
+	if (!pos && idx != 0 && idx > x + 1)
 	{
-		newNode->next = NULL;
-		newNode->prev = NULL;
-		*h = newNode;
-		return (newNode);
+		free(newNode);
+		return (NULL);
 	}
-	else if (idx == 0)
+	if (!*h || idx == 0)
 	{
 		newNode->next = *h;
 		if (*h)
@@ -48,7 +44,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h,
 	{
 		newNode->next = pos;
 		newNode->prev = pos->prev;
-		pos->prev->next = newNode;
+		if (pos->prev)
+			pos->prev->next = newNode;
 		pos->prev = newNode;
 	}
 	return (newNode);
