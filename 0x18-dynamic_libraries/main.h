@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdef.h>
+#include <stddef.h>
 
 int _putchar(char c);
 int _islower(int c);
@@ -28,4 +28,3 @@ char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 
 #endif
-
