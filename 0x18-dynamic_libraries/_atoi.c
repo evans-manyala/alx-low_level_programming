@@ -19,6 +19,6 @@ int _atoi(char *s)
 			num = 10 * num + (*s - '0');
 			s++;
 		}
-
-		return (num * sign);
 	}
+	return (num * sign);
+}
