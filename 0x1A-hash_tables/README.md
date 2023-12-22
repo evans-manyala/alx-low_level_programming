@@ -15,3 +15,11 @@
         Collision Handling: Collisions occur when two keys hash to the same index. There are various techniques to handle collisions, and one common approach is to use linked lists. Each array index contains a linked list of key-value pairs that hash to the same index.
 
         Key-Value Pairs: Each element in the hash table is a key-value pair. The key is used to compute the hash, and the value is the associated data.
+
+# TASK 0
+
+    Write a function that creates a hash table.
+        Prototype: hash_table_t *hash_table_create(unsigned long int size);
+        where size is the size of the array
+        Returns a pointer to the newly created hash table
+        If something went wrong, your function should return NULL
