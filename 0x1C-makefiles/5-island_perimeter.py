@@ -6,14 +6,16 @@ def island_perimeter(grid):
     Calculates the perimeter of the island in the given grid.
 
     Args:
-        grid: A list of lists of integers, where 0 represents water and 1 represents land.
+        grid: A list of lists of integers, where 0 represents water and
+        1 represents land.
 
     Returns:
         The perimeter of the island as an integer.
 
     Raises:
-        ValueError: If the grid is not rectangular, has dimensions exceeding 100,
-                    or does not have exactly one island.
+        ValueError: If the grid is not rectangular, has
+        dimensions exceeding 100, or does not have exactly
+        one island.
     """
 
     # Check grid dimensions and island existence
